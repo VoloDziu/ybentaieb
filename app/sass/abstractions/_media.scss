@@ -1,0 +1,25 @@
+/**
+ * MEDIA OBJECT ABSTRACTION
+ * layout of type "figure-content" or "content-figure" with floated figure
+ * and new block formatting context for the content part
+ *
+ * more info here: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ */
+
+ .media {
+ }
+
+ .media__figure {
+  float: left;
+  margin-right: 10px;
+
+  .media--rev & {
+    float: right;
+    margin-right: 0;
+    margin-left: 10px;
+  }
+ }
+
+.media__body {
+  overflow: hidden; // apply new block formatting context
+}
