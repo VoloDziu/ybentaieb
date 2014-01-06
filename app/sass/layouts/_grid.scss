@@ -121,10 +121,6 @@ $use-markup-fix:        true!default;
  * that the breakpoint fires at.
  */
 $breakpoints: (
-    'tw-iar' $bp-two-in-a-row,
-    'th-iar' $bp-three-in-a-row,
-    'fo-iar' $bp-four-in-a-row,
-    'fi-iar' $bp-five-in-a-row
 )!default;
 
 
@@ -138,9 +134,9 @@ $breakpoints: (
  * Push and pull shall only be used if `$push` and/or `$pull` and `$responsive`
  * have been set to ‘true’.
  */
-$breakpoint-has-widths: ('tw-iar', 'th-iar', 'fo-iar', 'fi-iar')!default;
-$breakpoint-has-push:   ('tw-iar', 'th-iar', 'fo-iar', 'fi-iar')!default;
-$breakpoint-has-pull:   ('tw-iar', 'th-iar', 'fo-iar', 'fi-iar')!default;
+$breakpoint-has-widths: ()!default;
+$breakpoint-has-push:   ()!default;
+$breakpoint-has-pull:   ()!default;
 
 
 /**
