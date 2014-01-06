@@ -1,7 +1,10 @@
 /**
  * MAIN LAYOUT WRAPEPR
- * handles max-width for different breakpoints
+ * usually sits inside one of .l-row layouts,
+ * handles horizontal boundary of objects
  */
 
 .l-wrap {
+  margin-left: auto;
+  margin-right: auto
 }

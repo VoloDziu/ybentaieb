@@ -1,0 +1,64 @@
+/**
+ * TARGET ABSTRACTION:
+ * handles vertical and horizontal alignment of element:
+ *
+ * -----------------   -----------------   -----------------
+ * |      ***      |   |               |   |               |
+ * |     *****     |   |               |   |               |
+ * |      ***      |   |      ***      |   |               |
+ * |               |   |     *****     |   |               |
+ * |               |   |      ***      |   |      ***      |
+ * |               |   |               |   |     *****     |
+ * |               |   |               |   |      ***      |
+ * -----------------   -----------------   -----------------
+ *
+ *  .parent-box                - parent box; should have height/width defined
+ *    .target                  - center horizontal alignment by default; modifiers --left & --right change the horizontal alignment
+ *      .target__hit           - inner element to be positioned. By default has middle positioninig, --top & --bottom modifiers change that behaviour
+ *      :after                 - makes the vertical alignment possible
+ *
+ * idea description here http://css-tricks.com/centering-in-the-unknown/
+ */
+
+%target-proto {
+  height: 100%;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    margin-right: -0.25rem;
+  }
+}
+
+.target {
+  @extend %target;
+  text-align: center;
+}
+
+.target--left {
+  @extend %target;
+  text-align: left;
+}
+
+.target--right {
+  @extend %target;
+  text-align: right;
+}
+
+.target__hit {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 98%; // hack to prevent occupy 100% for small screens
+}
+
+.target__hit--top {
+  @extend .target__hit;
+  vertical-align: top;
+}
+
+.target__hit--bottom {
+  @extend .target__hit;
+  vertical-align: bottom;
+}

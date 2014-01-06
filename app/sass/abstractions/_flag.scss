@@ -1,6 +1,20 @@
 /**
  * FLAG ABSTRACTION
- * extension for media abstraction with possibility of vertical alignment
+ * extension for media-object abstraction with possibility of vertical alignment
+ *
+ *
+ * +---------------+
+ * |               |
+ * |               |     ~~~~~~~~~
+ * |               |     ~~~ ~~~~~~~~~ ~~~~~       +-----+  +-----+
+ * |               |     ~~~~~~~~~~ ~~ ~~          |     |  |     |
+ * |               |     ~~~~~~ ~~~~~~             +-----+  +-----+
+ * |               |     ~~~~~~~~~~~~~~~~ ~~
+ * |               |
+ * +---------------+
+ *
+ *   .flag__sidebar       .flag__content            .flag__sidebar--right
+ *
  *
  * idea here http://csswizardry.com/2013/05/the-flag-object/
  */
@@ -10,34 +24,34 @@
   width: 100%;
 }
 
-.flag__sidebar,
+
+%flag-element {
+  display: table-cell;
+
+  & > img {
+    max-width: inherit !important; // fix Chrome bug with collapsing table-cell if it has img with max-width inside
+  }
+
+  .flag--top & {
+    vertical-align: top;
+  }
+
+  .flag--bottom & {
+    vertical-align: bottom;
+  }
+}
+
 .flag__content {
-    display: table-cell;
-    vertical-align: middle;
-
-    & > img {
-      max-width: inherit !important; // fix Chrome bug with collapsing table-cell if it has img with max-width inside
-    }
-
-    .flag--top & {
-        vertical-align: top;
-    }
-
-    .flag--bottom & {
-        vertical-align: bottom;
-    }
+  @extend %flag-element;
+  width: 100%;
 }
 
 .flag__sidebar {
+  @extend %flag-element;
   padding-right: 10px;
 }
 
 .flag__sidebar--right {
-  @extend .flag__sidebar;
-  padding-right: 0;
+  @extend %flag-element;
   padding-left: 10px;
-}
-
-.flag__content {
-    width: 100%;
 }
