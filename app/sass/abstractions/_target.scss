@@ -33,17 +33,17 @@
 }
 
 .target {
-  @extend %target;
+  @extend %target-proto;
   text-align: center;
 }
 
 .target--left {
-  @extend %target;
+  @extend %target-proto;
   text-align: left;
 }
 
 .target--right {
-  @extend %target;
+  @extend %target-proto;
   text-align: right;
 }
 
