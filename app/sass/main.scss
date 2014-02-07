@@ -6,32 +6,31 @@
  */
 
 // Global configurations & fonts
-@import "compass";
-@import "config";
+  @import "compass";
+  @import "config";
 
-// Functions and mixins
-@import "functions/rem";
-
-@import "mixins/breakpoint";
+// Utilities
+  @import "utilities/em-f";
+  @import "utilities/clearlast-p";
+  @import "utilities/breakpoint-m";
 
 // (SMACSS) Base styles: resets & bare element styling
-@import "base/normalize";
-@import "base/elements";
+  @import "base/normalize";
+  @import "base/general";
+  @import "base/typography";
 
-// (OOCSS) Reusable abstract objects
-@import "abstractions/island";
-@import "abstractions/target";
-@import "abstractions/flag";
-@import "abstractions/media";
-
-// (SMACSS) styles for layouts
-@import "layouts/row";
-@import "layouts/wrap";
-@import "layouts/justified";
+// (SMACSS) styles for layouts and (OOCSS) abstractions
+  @import "layouts/flag";
+  @import "layouts/grid";
+  @import "layouts/island";
+  @import "layouts/justified";
+  @import "layouts/list";
+  @import "layouts/media";
+  @import "layouts/target";
 
 // (SMACSS) Styles for modules
-// ...modules here...
+  // ...modules here...
 
 // (SMACSS) Global state styles.
-//          Module-specific styles are inside module file
-@import "states";
+// Module-specific styles are inside module file
+  @import "states";
