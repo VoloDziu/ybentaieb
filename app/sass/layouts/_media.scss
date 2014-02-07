@@ -6,20 +6,23 @@
  * more info here: http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
  */
 
- .media {
- }
+.media {
+  overflow: hidden;
+}
 
- .media__figure {
+.media__figure {
   float: left;
-  margin-right: 10px;
+  margin-right: em(15, $base-font-size);
 
   .media--rev & {
     float: right;
     margin-right: 0;
-    margin-left: 10px;
+    margin-left: em(15, $base-font-size);
   }
- }
+}
 
 .media__body {
   overflow: hidden; // apply new block formatting context
+
+  @extend %clearlast;
 }

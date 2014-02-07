@@ -6,14 +6,14 @@
  * +---------------+
  * |               |
  * |               |     ~~~~~~~~~
- * |               |     ~~~ ~~~~~~~~~ ~~~~~       +-----+  +-----+
- * |               |     ~~~~~~~~~~ ~~ ~~          |     |  |     |
- * |               |     ~~~~~~ ~~~~~~             +-----+  +-----+
+ * |               |     ~~~ ~~~~~~~~~ ~~~~~
+ * |               |     ~~~~~~~~~~ ~~ ~~
+ * |               |     ~~~~~~ ~~~~~~
  * |               |     ~~~~~~~~~~~~~~~~ ~~
  * |               |
  * +---------------+
  *
- *   .flag__sidebar       .flag__content            .flag__sidebar--right
+ *   .flag__figure       .flag__content
  *
  *
  * idea here http://csswizardry.com/2013/05/the-flag-object/
@@ -24,12 +24,12 @@
   width: 100%;
 }
 
-
 %flag-element {
   display: table-cell;
+  vertical-align: middle;
 
   & > img {
-    max-width: inherit !important; // fix Chrome bug with collapsing table-cell if it has img with max-width inside
+    max-width: inherit;
   }
 
   .flag--top & {
@@ -44,14 +44,16 @@
 .flag__content {
   @extend %flag-element;
   width: 100%;
+
+  @extend %clearlast;
 }
 
-.flag__sidebar {
+.flag__figure {
   @extend %flag-element;
-  padding-right: 10px;
-}
+  padding-right: em(15, $base-font-size);
 
-.flag__sidebar--right {
-  @extend %flag-element;
-  padding-left: 10px;
+  .flag--rev & {
+    padding-right: 0;
+    padding-left: em(15, $base-font-size);
+  }
 }

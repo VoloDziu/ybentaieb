@@ -20,45 +20,27 @@
  * idea description here http://css-tricks.com/centering-in-the-unknown/
  */
 
-%target-proto {
+.target {
   height: 100%;
+  text-align: center;
 
-  &:after {
+  &:before {
     content: '';
     display: inline-block;
     vertical-align: middle;
     height: 100%;
-    margin-right: -0.25rem;
+    margin-left: -0.25em;
   }
 }
-
-.target {
-  @extend %target-proto;
-  text-align: center;
-}
-
-.target--left {
-  @extend %target-proto;
-  text-align: left;
-}
-
-.target--right {
-  @extend %target-proto;
-  text-align: right;
-}
+  .target--left { text-align: left; }
+  .target--right { text-align: right; }
 
 .target__hit {
   display: inline-block;
   vertical-align: middle;
   max-width: 98%; // hack to prevent occupy 100% for small screens
-}
 
-.target__hit--top {
-  @extend .target__hit;
-  vertical-align: top;
+  @extend %clearlast;
 }
-
-.target__hit--bottom {
-  @extend .target__hit;
-  vertical-align: bottom;
-}
+  .target__hit--top { vertical-align: top; }
+  .target__hit--bottom { vertical-align: bottom; }

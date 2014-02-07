@@ -1,0 +1,17 @@
+.l-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__item {
+  margin: 0;
+
+  .l-list--inline & {
+    display: inline-block;
+
+    & + & {
+      margin-left: em(15, $base-font-size);
+    }
+  }
+}

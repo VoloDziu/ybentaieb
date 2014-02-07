@@ -9,6 +9,7 @@
  * description of idea here http://justifygrid.com/
  */
 
+
 .l-justified {
   text-align: justify;
   text-justify: distribute-all-lines;
@@ -29,6 +30,13 @@
   text-align: left;
   text-justify: auto;
 
-  font-size: #{$base-font-size}px; font-size: rem($base-font-size);
-  line-height: #{$base-line-height}px; line-height: rem($base-line-height);
+  @extend %clearlast;
 }
+
+@mixin setup-justified-children($font-size, $line-height) {
+  .justified__item {
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+

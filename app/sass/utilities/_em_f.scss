@@ -1,0 +1,6 @@
+@function em($pixel-size, $base-size:16) {
+  /**
+   * returns size in EM units from given PX units
+   */
+  @return #{$pixel-size/$base-size}em;
+}

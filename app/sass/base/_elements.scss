@@ -58,10 +58,3 @@ img {
   display: inline-block;
   max-width: 100%;
 }
-
-ul {
-  @include appearance(none);
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
