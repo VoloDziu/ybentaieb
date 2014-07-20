@@ -1,0 +1,44 @@
+.content {
+  max-width: em(800);
+  margin: 0 auto;
+  padding: 0 em(50);
+
+  h3 {
+    font-family: $secondary-font-family;
+    font-weight: 700;
+
+    margin-top: 5em;
+    margin-bottom: 1em;
+
+    color: $headings;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    font-family: $secondary-font-family;
+    font-weight: 700;
+
+    margin-top: 5em;
+
+    color: $headings;
+  }
+
+  a {
+    display: inline-block;
+
+    border-bottom: 1px solid rgba($light, 0.5);
+  }
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+    margin: 5em auto;
+  }
+}
+  .content--large {
+    max-width: em(1000);
+  }

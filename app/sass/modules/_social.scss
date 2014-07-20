@@ -1,0 +1,25 @@
+.social {
+  text-align: center;
+}
+
+.social__icon {
+  font-size: em(20);
+  line-height: em(35,20);
+
+  display: block;
+  height: em(40,20); width: em(40,20);
+
+  text-align: center;
+  color: $dark;
+
+  opacity: 0.5;
+  border-radius: 50%;
+  border: 2px solid $dark;
+
+  @include transition-property(opacity);
+  @include transition-duration(0.5s);
+
+  &:hover {
+    opacity: 1;
+  }
+}

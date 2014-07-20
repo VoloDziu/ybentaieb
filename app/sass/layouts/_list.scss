@@ -6,12 +6,14 @@
 
 .list__item {
   margin: 0;
+}
 
-  .l-list--inline & {
+.l-list--inline {
+  .list__item {
     display: inline-block;
+  }
 
-    & + & {
-      margin-left: em(15, $base-font-size);
-    }
+  .list__item + .list__item {
+    margin-left: em(30, $base-font-size);
   }
 }

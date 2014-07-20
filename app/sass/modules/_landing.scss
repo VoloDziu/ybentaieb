@@ -1,0 +1,36 @@
+.landing {
+  text-align: center;
+}
+
+.landing__heading {
+  font-family: $secondary-font-family;
+  font-weight: 700;
+  font-size: em(32, $base-font-size);
+  line-height: em(48, 32);
+
+  text-transform: uppercase;
+  color: $headings;
+
+  -webkit-animation-duration: 2s;
+     -moz-animation-duration: 2s;
+      -ms-animation-duration: 2s;
+       -o-animation-duration: 2s;
+}
+
+.landing__subheading {
+  font-family: $secondary-font-family;
+  font-size: em(18, $base-font-size);
+  line-height: em(24, 18);
+
+  text-transform: uppercase;
+
+  -webkit-animation-duration: 1.5s;
+     -moz-animation-duration: 1.5s;
+      -ms-animation-duration: 1.5s;
+       -o-animation-duration: 1.5s;
+
+  -webkit-animation-delay: 1s;
+     -moz-animation-delay: 1s;
+      -ms-animation-delay: 1s;
+       -o-animation-delay: 1s;
+}

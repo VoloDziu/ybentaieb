@@ -1,0 +1,13 @@
+.contact {
+  text-align: center;
+}
+
+.contact__heading {
+  font-size: em(24, $base-font-size);
+  line-height: em(28, 24);
+  font-weight: 700;
+
+  padding-bottom: 1em;
+
+  color: $headings;
+}

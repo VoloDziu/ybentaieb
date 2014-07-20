@@ -1,0 +1,39 @@
+.button {
+  display: inline-block;
+  padding: 8px 26px;
+
+  font-family: $secondary-font-family;
+  font-size: em(12, $base-font-size);
+  line-height: em(18, 12);
+  font-weight: 700;
+
+  color: white;
+  text-transform: uppercase;
+
+  border-radius: 20px;
+  background-color: $dark;
+  border-color: $dark;
+  border-width: 2px;
+  border-style: solid;
+
+  @include transition-property(color, background-color);
+  @include transition-duration(0.5s, 0.5s);
+
+  &:hover {
+    background-color: white;
+    color: $dark;
+  }
+}
+
+.button--inverse {
+  @extend .button;
+
+  background-color: transparent;
+  border-color: white;
+  color: white;
+
+  &:hover {
+    background-color: white;
+    color: $dark;
+  }
+}

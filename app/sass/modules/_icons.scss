@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'yb';
+  src:url('/fonts/yb.eot?fxgzow');
+  src:url('/fonts/yb.eot?#iefixfxgzow') format('embedded-opentype'),
+    url('/fonts/yb.woff?fxgzow') format('woff'),
+    url('/fonts/yb.ttf?fxgzow') format('truetype'),
+    url('/fonts/yb.svg?fxgzow#yb') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  font-family: 'yb';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.icon--twitter:before {
+  content: "\e600";
+}
+.icon--facebook:before {
+  content: "\e601";
+}
+.icon--instagram:before {
+  content: "\e602";
+}
+.icon--dribbble:before {
+  content: "\e603";
+}
+.icon--linkedin:before {
+  content: "\e604";
+}
+.icon--arrow-down:before {
+  content: "\e605";
+}
+.icon--arrow-right:before {
+  content: "\e606";
+}
+.icon--logo:before {
+  content: "\e607";
+}

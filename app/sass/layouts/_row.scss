@@ -1,0 +1,33 @@
+/**
+ * ROW LAYOUT
+ * Manages vertical paddings
+ */
+
+.l-row {
+  // nothing here for now...
+  @include setup-justified-children( #{$base-font-size}px, #{$base-line-height}px );
+}
+  .l-row--landing {
+    position: relative;
+
+    padding-top: em(230, $base-font-size);
+    padding-bottom: em(330, $base-font-size);
+  }
+  .l-row--project {
+    padding-top: em(180, $base-font-size);
+    padding-bottom: em(180, $base-font-size);
+  }
+  .l-row--project-details {
+    padding-top: em(180, $base-font-size);
+    padding-bottom: em(100, $base-font-size);
+  }
+  .l-row--contact {
+    padding-top: em(110, $base-font-size);
+    padding-bottom: em(110, $base-font-size);
+  }
+  .l-row--green  { background-color: $green;  }
+  .l-row--dark   { background-color: $dark;   }
+  .l-row--red    { background-color: $red;    }
+  .l-row--orange { background-color: $orange; }
+  .l-row--purple { background-color: $purple; }
+  .l-row--light  { background-color: $light;  }

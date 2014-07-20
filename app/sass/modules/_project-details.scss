@@ -1,0 +1,56 @@
+.project-details {
+  display: block;
+  max-width: em(1000);
+  margin: 0 auto;
+
+  text-align: left;
+
+  @include breakpoint($bp-s) {
+    max-width: em(340);
+  }
+
+  @include breakpoint($bp-m) {
+    max-width: em(950);
+  }
+}
+
+.project-details__col {
+  background: white;
+
+  h3 {
+    font-family: $secondary-font-family;
+    font-weight: 700;
+
+    color: $headings;
+    text-transform: uppercase;
+  }
+
+  a {
+    display: inline-block;
+
+    border-bottom: 1px solid rgba($light, 0.5);
+  }
+
+}
+  .project-details__col--inverse {
+    background: $dark;
+    color: white;
+
+    h3 {
+      color: inherit;
+    }
+  }
+
+.project-details__delay--2 {
+  -webkit-animation-delay: .3s;
+     -moz-animation-delay: .3s;
+      -ms-animation-delay: .3s;
+       -o-animation-delay: .3s;
+}
+
+.project-details__delay--3 {
+  -webkit-animation-delay: .9s;
+     -moz-animation-delay: .9s;
+      -ms-animation-delay: .9s;
+       -o-animation-delay: .9s;
+}

@@ -1,0 +1,23 @@
+.arrow-next {
+  font-size: em(35);
+
+  display: block;
+  width: em(40, 35); height: em(40, 35);
+
+  position: absolute;
+  top: 50%; left: 50%;
+  margin-left: - em(20, 35);
+  padding-top: em(200, 35);
+
+  text-align: center;
+
+  -webkit-animation-iteration-count: infinite;
+     -moz-animation-iteration-count: infinite;
+      -ms-animation-iteration-count: infinite;
+       -o-animation-iteration-count: infinite;
+
+  -webkit-animation-duration: 2.5s;
+     -moz-animation-duration: 2.5s;
+      -ms-animation-duration: 2.5s;
+       -o-animation-duration: 2.5s;
+}

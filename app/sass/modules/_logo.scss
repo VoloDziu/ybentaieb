@@ -1,0 +1,10 @@
+.logo {
+  font-size: em(35);
+
+  @include transition-property(color);
+  @include transition-duration(0.5s);
+
+  &:hover {
+    color: $headings;
+  }
+}

@@ -6,6 +6,12 @@
  */
 
 .island {
+  padding: em(30, $base-font-size);
+
+  @extend %clearlast;
+}
+
+.island--small {
   padding: em(20, $base-font-size);
 
   @extend %clearlast;

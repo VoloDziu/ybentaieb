@@ -1,16 +1,28 @@
 // font configs
-  $base-font-family: sans-serif;
+  $base-font-family: 'Open Sans', sans-serif;
   $base-font-size:   16;
-  $base-line-height: 22;
+  $base-line-height: 27;
+
+  $secondary-font-family: 'Montserrat', sans-serif;
 
 // colors
-// ...
+  $green:  #3CBAA6;
+  $dark:   #224256;
+  $red:    #DE5020;
+  $orange: #E7A12E;
+  $purple: #504178;
+  $light:  #E1E9EF;
+
+  $text:     #848C94;
+  $headings: #475766;
 
 // spacing
 // ...
 
 // breakpoint widths in pixels
-// ...
+  $s: 0;
+  $m: 1000;
 
 // generate media-queries parameters out of breakpoints
-// ...
+  $bp-s: '(min-width: #{$s}px)';
+  $bp-m: '(min-width: #{$m}px)';

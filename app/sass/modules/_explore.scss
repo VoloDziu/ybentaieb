@@ -1,0 +1,15 @@
+.explore__item {
+  height: em(250);
+}
+  .explore__item--dark   { background-color: $dark; }
+  .explore__item--green  { background-color: $green; }
+  .explore__item--red    { background-color: $red; }
+  .explore__item--purple { background-color: $purple; }
+  .explore__item--orange { background-color: $orange; }
+
+.explore__title {
+  font-size: em(35);
+  line-height: em(40, 35);
+  font-weight: 700;
+  color: white;
+}

@@ -5,7 +5,11 @@
  * read more here http://webuild.envato.com/blog/how-to-scale-and-maintain-legacy-css-with-sass-and-smacss/
  */
 
+// 3rd party css libraries
+  @import "vendor/animate";
+
 // Global configurations & fonts
+  @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700|Montserrat:400,700);
   @import "compass";
   @import "config";
 
@@ -27,9 +31,20 @@
   @import "layouts/list";
   @import "layouts/media";
   @import "layouts/target";
+  @import "layouts/row";
 
 // (SMACSS) Styles for modules
-  // ...modules here...
+  @import "modules/buttons";
+  @import "modules/icons";
+  @import "modules/landing";
+  @import "modules/project";
+  @import "modules/contact";
+  @import "modules/social";
+  @import "modules/logo";
+  @import "modules/arrow-next";
+  @import "modules/project-details";
+  @import "modules/content";
+  @import "modules/explore";
 
 // (SMACSS) Global state styles.
 // Module-specific styles are inside module file
